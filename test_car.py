@@ -107,26 +107,26 @@ class TestNubbinBattery(unittest.TestCase):
 
 class TestCarriganTire(unittest.TestCase):
     def test_tire_should_be_serviced(self):
-        tire_array = []
+        tire_array = [0.2,0.4,0.2,0.9]
 
         tire = CarriganTire(tire_array)
         self.assertTrue(tire.needs_service())
 
     def test_tire_should_not_be_serviced(self):
-        tire_array = []
+        tire_array = [0.1,0,0.3,0.4,0.5]
 
         tire = CarriganTire(tire_array)
         self.assertFalse(tire.needs_service())
 
 class TestOctoprimesTire(unittest.TestCase):
     def test_tire_should_be_serviced(self):
-        tire_array = []
+        tire_array = [0.9,0.5,0.6,0.7]
 
         tire = OctoprimesTire(tire_array)
         self.assertTrue(tire.needs_service())
 
     def test_tire_should_not_be_serviced(self):
-        tire_array = []
+        tire_array = [0,1,0.3,0.1,0.2]
 
         tire= OctoprimesTire(tire_array)
         self.assertFalse(tire.needs_service())
