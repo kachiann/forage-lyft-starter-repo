@@ -1,11 +1,13 @@
 from Tire.Tire import Tire
 
 class CarriganTire(Tire):
-    def __int__(self):
-        pass
+    def __int__(self, tire_array):
+        self.tire_array = tire_array
+
     def needs_service(self)-> bool:
-        for val tire_array:
-            if val > 0.9:
+        for val in self.tire_array:
+            if val >= 0.9:
                 return True
-            else: return False
+            else: 
+                return False
     

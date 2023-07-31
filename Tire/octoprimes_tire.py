@@ -10,5 +10,3 @@ class OctoprimesTire(Tire):
             return True
         else: 
             return False
-        
-    
